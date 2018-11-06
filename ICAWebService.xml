@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="ICAWebServiceservice" targetNamespace="http://tempuri.org/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns1="urn:ClientelaCawsImpl" xmlns:ns2="urn:CAWebServiceIntf">
+  <types>
+    <xs:schema targetNamespace="urn:ClientelaCawsImpl" xmlns="urn:ClientelaCawsImpl">
+      <xs:complexType name="TClientelaCaws">
+        <xs:sequence>
+          <xs:element name="CLI_CDUOP" type="xs:int"/>
+          <xs:element name="CLI_SQMATRIC" type="xs:int"/>
+          <xs:element name="CLI_NUDV" type="xs:int"/>
+          <xs:element name="CLI_MATRICULA" type="xs:string"/>
+          <xs:element name="CLI_CDMATRIANT" type="xs:string"/>
+          <xs:element name="CLI_NMCLIENTE" type="xs:string"/>
+          <xs:element name="CLI_NMSOCIAL" type="xs:string"/>
+          <xs:element name="CLI_CDUOTITUL" type="xs:int"/>
+          <xs:element name="CLI_SQTITULMAT" type="xs:int"/>
+          <xs:element name="CLI_DTINSCRI" type="xs:string"/>
+          <xs:element name="CLI_CDNIVEL_ESC" type="xs:int"/>
+          <xs:element name="CLI_DSNIVEL_ESC" type="xs:string"/>
+          <xs:element name="CLI_NUULTSERIE" type="xs:int"/>
+          <xs:element name="CLI_VBESTUDANT" type="xs:int"/>
+          <xs:element name="CLI_DSNATURAL" type="xs:string"/>
+          <xs:element name="CLI_DSNACIONAL" type="xs:string"/>
+          <xs:element name="CLI_NUDEPEND" type="xs:int"/>
+          <xs:element name="CLI_NUCTPS" type="xs:string"/>
+          <xs:element name="CLI_DTADMISSAO" type="xs:string"/>
+          <xs:element name="CLI_DTDEMISSAO" type="xs:string"/>
+          <xs:element name="CLI_NUPISPASEP" type="xs:string"/>
+          <xs:element name="CLI_DSCARGO" type="xs:string"/>
+          <xs:element name="CLI_IDORGEMIRG" type="xs:string"/>
+          <xs:element name="CLI_DTEMIRG" type="xs:string"/>
+          <xs:element name="CLI_PARENTESCO" type="xs:string"/>
+          <xs:element name="CLI_NUREGGERAL" type="xs:string"/>
+          <xs:element name="CLI_NUCPF" type="xs:string"/>
+          <xs:element name="CLI_CDCLASSIF" type="xs:string"/>
+          <xs:element name="CLI_DSCLASSIF" type="xs:string"/>
+          <xs:element name="CLI_VLRENDA" type="xs:string"/>
+          <xs:element name="CLI_VLRENDAFAM" type="xs:string"/>
+          <xs:element name="CLI_CDCATEGORI" type="xs:int"/>
+          <xs:element name="CLI_DSCATEGORI" type="xs:string"/>
+          <xs:element name="CLI_TPCATEGORI" type="xs:int"/>
+          <xs:element name="CLI_TEOBS" type="xs:string"/>
+          <xs:element name="CLI_DTATU" type="xs:string"/>
+          <xs:element name="CLI_HRATU" type="xs:string"/>
+          <xs:element name="CLI_CDESTCIVIL" type="xs:int"/>
+          <xs:element name="CLI_DSESTCIVIL" type="xs:string"/>
+          <xs:element name="CLI_STMATRIC" type="xs:int"/>
+          <xs:element name="CLI_DTNASCIMEN" type="xs:string"/>
+          <xs:element name="CLI_DTVENCTO" type="xs:string"/>
+          <xs:element name="CLI_STEMICART" type="xs:int"/>
+          <xs:element name="CLI_DTEMICART" type="xs:string"/>
+          <xs:element name="CLI_CDSEXO" type="xs:int"/>
+          <xs:element name="CLI_NMPAI" type="xs:string"/>
+          <xs:element name="CLI_NMMAE" type="xs:string"/>
+          <xs:element name="CLI_NUCGCCEI" type="xs:string"/>
+          <xs:element name="CLI_NRVIACART" type="xs:int"/>
+          <xs:element name="CLI_NUMCARTAO" type="xs:int"/>
+          <xs:element name="CLI_QNTCOBRANCASVENCIDAS" type="xs:int"/>
+          <xs:element name="CLI_QTNOCORRENCIASATIVAS" type="xs:int"/>
+          <xs:element name="ENDE_DSLOGRADOU" type="xs:string"/>
+          <xs:element name="ENDE_SIESTADO" type="xs:string"/>
+          <xs:element name="ENDE_DSCOMPLEM" type="xs:string"/>
+          <xs:element name="ENDE_NUIMOVEL" type="xs:int"/>
+          <xs:element name="ENDE_DSBAIRRO" type="xs:string"/>
+          <xs:element name="ENDE_NUCEP" type="xs:string"/>
+          <xs:element name="ENDE_DTENDERECO" type="xs:string"/>
+          <xs:element name="ENDE_CDMUNICIP" type="xs:int"/>
+          <xs:element name="ENDE_DSMUNICIP" type="xs:string"/>
+          <xs:element name="CONT_NURAMAL" type="xs:int"/>
+          <xs:element name="CONT_NMPESSOA" type="xs:string"/>
+          <xs:element name="CONT_HRCONTATO" type="xs:string"/>
+          <xs:element name="CONT_TPCONTATO" type="xs:int"/>
+          <xs:element name="CONT_NUDDD" type="xs:string"/>
+          <xs:element name="CONT_DSCONTATO" type="xs:string"/>
+          <xs:element name="CONT_STRECEBEINFO" type="xs:int"/>
+          <xs:element name="RESP_NMRESPONSA" type="xs:string"/>
+          <xs:element name="RESP_NUCPF" type="xs:string"/>
+          <xs:element name="RESP_NUREGGERAL" type="xs:string"/>
+          <xs:element name="RESP_DTEMIRG" type="xs:string"/>
+          <xs:element name="RESP_IDORGEMIRG" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema targetNamespace="urn:CAWebServiceIntf" xmlns="urn:CAWebServiceIntf">
+      <xs:complexType name="TResultadoAutoTeste">
+        <xs:sequence>
+          <xs:element name="Resultado" type="xs:boolean"/>
+          <xs:element name="MensagemErro" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </types>
+  <message name="GetFotoClientela0Request">
+    <part name="CdUOP" type="xs:short"/>
+    <part name="SqMatric" type="xs:int"/>
+  </message>
+  <message name="GetFotoClientela0Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="GetClientelaExt1Request">
+    <part name="CdUOP" type="xs:short"/>
+    <part name="SqMatric" type="xs:int"/>
+  </message>
+  <message name="GetClientelaExt1Response">
+    <part name="return" type="ns1:TClientelaCaws"/>
+  </message>
+  <message name="GetClientela2Request">
+    <part name="CdUOP" type="xs:short"/>
+    <part name="SqMatric" type="xs:int"/>
+    <part name="Identity" type="xs:string"/>
+  </message>
+  <message name="GetClientela2Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="GetClientelaProxy3Request">
+    <part name="CdAdmin" type="xs:short"/>
+    <part name="CdUOP" type="xs:short"/>
+    <part name="SqMatric" type="xs:int"/>
+    <part name="Identity" type="xs:string"/>
+  </message>
+  <message name="GetClientelaProxy3Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="GetSituacao4Request">
+    <part name="CdUOP" type="xs:short"/>
+    <part name="SqMatric" type="xs:int"/>
+    <part name="Identity" type="xs:string"/>
+  </message>
+  <message name="GetSituacao4Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="UpdateHostSCA5Request">
+    <part name="ACDADMIN" type="xs:int"/>
+    <part name="AIPDR" type="xs:string"/>
+    <part name="AUserName" type="xs:string"/>
+  </message>
+  <message name="UpdateHostSCA5Response"/>
+  <message name="CarteiraValida6Request">
+    <part name="CdUOP" type="xs:short"/>
+    <part name="SqMatric" type="xs:int"/>
+  </message>
+  <message name="CarteiraValida6Response">
+    <part name="return" type="xs:boolean"/>
+  </message>
+  <message name="CarteiraExameMedico7Request">
+    <part name="CdUOP" type="xs:short"/>
+    <part name="SqMatric" type="xs:int"/>
+  </message>
+  <message name="CarteiraExameMedico7Response">
+    <part name="return" type="xs:boolean"/>
+  </message>
+  <message name="InscritoNaAtividade8Request">
+    <part name="CdUOP" type="xs:short"/>
+    <part name="SqMatric" type="xs:int"/>
+    <part name="CodigoTurma" type="xs:string"/>
+  </message>
+  <message name="InscritoNaAtividade8Response">
+    <part name="return" type="xs:boolean"/>
+  </message>
+  <message name="GetEmpresaDN9Request">
+    <part name="ACGC" type="xs:string"/>
+    <part name="AUF" type="xs:string"/>
+    <part name="Identity" type="xs:string"/>
+  </message>
+  <message name="GetEmpresaDN9Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="GetEmpresaContribDN10Request">
+    <part name="ACGC" type="xs:string"/>
+    <part name="Identity" type="xs:string"/>
+  </message>
+  <message name="GetEmpresaContribDN10Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="AutoTeste11Request"/>
+  <message name="AutoTeste11Response">
+    <part name="return" type="ns2:TResultadoAutoTeste"/>
+  </message>
+  <message name="GetVersao12Request"/>
+  <message name="GetVersao12Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <portType name="ICAWebService">
+    <operation name="GetFotoClientela">
+      <input message="tns:GetFotoClientela0Request"/>
+      <output message="tns:GetFotoClientela0Response"/>
+    </operation>
+    <operation name="GetClientelaExt">
+      <input message="tns:GetClientelaExt1Request"/>
+      <output message="tns:GetClientelaExt1Response"/>
+    </operation>
+    <operation name="GetClientela">
+      <input message="tns:GetClientela2Request"/>
+      <output message="tns:GetClientela2Response"/>
+    </operation>
+    <operation name="GetClientelaProxy">
+      <input message="tns:GetClientelaProxy3Request"/>
+      <output message="tns:GetClientelaProxy3Response"/>
+    </operation>
+    <operation name="GetSituacao">
+      <input message="tns:GetSituacao4Request"/>
+      <output message="tns:GetSituacao4Response"/>
+    </operation>
+    <operation name="UpdateHostSCA">
+      <input message="tns:UpdateHostSCA5Request"/>
+      <output message="tns:UpdateHostSCA5Response"/>
+    </operation>
+    <operation name="CarteiraValida">
+      <input message="tns:CarteiraValida6Request"/>
+      <output message="tns:CarteiraValida6Response"/>
+    </operation>
+    <operation name="CarteiraExameMedico">
+      <input message="tns:CarteiraExameMedico7Request"/>
+      <output message="tns:CarteiraExameMedico7Response"/>
+    </operation>
+    <operation name="InscritoNaAtividade">
+      <input message="tns:InscritoNaAtividade8Request"/>
+      <output message="tns:InscritoNaAtividade8Response"/>
+    </operation>
+    <operation name="GetEmpresaDN">
+      <input message="tns:GetEmpresaDN9Request"/>
+      <output message="tns:GetEmpresaDN9Response"/>
+    </operation>
+    <operation name="GetEmpresaContribDN">
+      <input message="tns:GetEmpresaContribDN10Request"/>
+      <output message="tns:GetEmpresaContribDN10Response"/>
+    </operation>
+    <operation name="AutoTeste">
+      <input message="tns:AutoTeste11Request"/>
+      <output message="tns:AutoTeste11Response"/>
+    </operation>
+    <operation name="GetVersao">
+      <input message="tns:GetVersao12Request"/>
+      <output message="tns:GetVersao12Response"/>
+    </operation>
+  </portType>
+  <binding name="ICAWebServicebinding" type="tns:ICAWebService">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="GetFotoClientela">
+      <soap:operation soapAction="urn:CAWebServiceIntf-ICAWebService#GetFotoClientela" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </output>
+    </operation>
+    <operation name="GetClientelaExt">
+      <soap:operation soapAction="urn:CAWebServiceIntf-ICAWebService#GetClientelaExt" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </output>
+    </operation>
+    <operation name="GetClientela">
+      <soap:operation soapAction="urn:CAWebServiceIntf-ICAWebService#GetClientela" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </output>
+    </operation>
+    <operation name="GetClientelaProxy">
+      <soap:operation soapAction="urn:CAWebServiceIntf-ICAWebService#GetClientelaProxy" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </output>
+    </operation>
+    <operation name="GetSituacao">
+      <soap:operation soapAction="urn:CAWebServiceIntf-ICAWebService#GetSituacao" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </output>
+    </operation>
+    <operation name="UpdateHostSCA">
+      <soap:operation soapAction="urn:CAWebServiceIntf-ICAWebService#UpdateHostSCA" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </output>
+    </operation>
+    <operation name="CarteiraValida">
+      <soap:operation soapAction="urn:CAWebServiceIntf-ICAWebService#CarteiraValida" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </output>
+    </operation>
+    <operation name="CarteiraExameMedico">
+      <soap:operation soapAction="urn:CAWebServiceIntf-ICAWebService#CarteiraExameMedico" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </output>
+    </operation>
+    <operation name="InscritoNaAtividade">
+      <soap:operation soapAction="urn:CAWebServiceIntf-ICAWebService#InscritoNaAtividade" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </output>
+    </operation>
+    <operation name="GetEmpresaDN">
+      <soap:operation soapAction="urn:CAWebServiceIntf-ICAWebService#GetEmpresaDN" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </output>
+    </operation>
+    <operation name="GetEmpresaContribDN">
+      <soap:operation soapAction="urn:CAWebServiceIntf-ICAWebService#GetEmpresaContribDN" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </output>
+    </operation>
+    <operation name="AutoTeste">
+      <soap:operation soapAction="urn:CAWebServiceIntf-ICAWebService#AutoTeste" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </output>
+    </operation>
+    <operation name="GetVersao">
+      <soap:operation soapAction="urn:CAWebServiceIntf-ICAWebService#GetVersao" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:CAWebServiceIntf-ICAWebService"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="ICAWebServiceservice">
+    <port name="ICAWebServicePort" binding="tns:ICAWebServicebinding">
+      <soap:address location="http://10.82.0.55:8071/cawsprj/soap/ICAWebService"/>
+    </port>
+  </service>
+</definitions>
+
