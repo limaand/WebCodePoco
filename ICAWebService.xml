@@ -355,7 +355,7 @@
   </binding>
   <service name="ICAWebServiceservice">
     <port name="ICAWebServicePort" binding="tns:ICAWebServicebinding">
-      <soap:address location="http://10.82.0.55:8071/cawsprj/soap/ICAWebService"/>
+      <soap:address location="http://aplic3.sesc.com.br:94/cawsprj/soap/ICAWebService"/>
     </port>
   </service>
 </definitions>
